@@ -1,4 +1,4 @@
 .classpath
-*.project
-.settings/org.eclipse.jdt.core.prefs
-bin/edu/aecc/bulletin/Screen.class
+.project
+.settings
+bin

@@ -3,8 +3,6 @@ package edu.aecc.bulletin;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 
-import javax.swing.JFrame;
-
 /**
  * A controller that will handle the given executable.
  * 
@@ -17,7 +15,6 @@ public class Application implements Runnable {
 	private Thread thread;
 	private GraphicsDevice gd;
 	private Screen screen;
-	private JFrame frame;
 	private boolean running;
 	private long ticks;
 
@@ -37,15 +34,12 @@ public class Application implements Runnable {
 	 * Starts the executable, internal update thread and the screen.
 	 */
 	public void start() {
+		System.out.println("Starting new application");
 		exec.init(this);
 		thread = new Thread(this);
 		running = true;
-		frame = new JFrame();
-		frame.add(screen);
-		frame.addKeyListener(screen);
-		frame.setUndecorated(true);
-		gd.setFullScreenWindow(frame);
-		frame.setVisible(true);
+		gd.setFullScreenWindow(screen.getFrame());
+		screen.getFrame().setVisible(true);
 		thread.start();
 	}
 
@@ -53,6 +47,7 @@ public class Application implements Runnable {
 	 * Stops the internal update thread.
 	 */
 	public void stop() {
+		System.out.println("Stopping application");
 		running = false;
 	}
 
@@ -85,12 +80,12 @@ public class Application implements Runnable {
 			exec.update(ticks);
 			screen.repaint();
 			try {
-				Thread.sleep(20);
-			} catch (InterruptedException e) {
+				Thread.sleep(15);
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
-		frame.dispose();
+		screen.getFrame().dispose();
 		exec.stop();
 	}
 }

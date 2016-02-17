@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
@@ -16,7 +17,8 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class Screen extends JPanel implements KeyListener {
 
-	Executable exec;
+	private Executable exec;
+	private JFrame frame;
 
 	/**
 	 * Initializes the screen with the given executable.
@@ -25,7 +27,28 @@ public class Screen extends JPanel implements KeyListener {
 	 *            Executable that is using the screen
 	 */
 	public Screen(Executable e) {
+		System.out.println("Creating new Screen");
 		exec = e;
+		frame = new JFrame();
+		frame.add(this);
+		frame.addKeyListener(this);
+		frame.setUndecorated(true);
+	}
+
+	/**
+	 * Returns the JFrame responsible for the screen.
+	 * 
+	 * @return JFrame responsible for the screen
+	 */
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	/**
+	 * Changes the visibility of the window.
+	 */
+	public void setVisible(boolean b) {
+		frame.setVisible(b);
 	}
 
 	@Override
