@@ -8,8 +8,8 @@ import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import edu.aecc.bulletin.Application;
-import edu.aecc.bulletin.Executable;
+import edu.aecc.bulletin.core.Application;
+import edu.aecc.bulletin.core.Executable;
 
 /**
  * Basic test that illustrates all possible display modes.
@@ -73,6 +73,14 @@ public class DisplayModeTest implements Executable {
 		if (ke.getKeyChar() == 'q') {
 			app.stop();
 		}
+	}
+
+	@Override
+	public void keyPressed(KeyEvent ke) {
+	}
+
+	@Override
+	public void keyReleased(KeyEvent ke) {
 	}
 
 }

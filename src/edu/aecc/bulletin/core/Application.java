@@ -1,7 +1,9 @@
-package edu.aecc.bulletin;
+package edu.aecc.bulletin.core;
 
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+
+import utilities.Logger;
 
 /**
  * A controller that will handle the given executable.
@@ -25,6 +27,7 @@ public class Application implements Runnable {
 	 *            Executable to handle
 	 */
 	public Application(Executable e) {
+		Logger.init();
 		gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
 		exec = e;
 		screen = new Screen(e);

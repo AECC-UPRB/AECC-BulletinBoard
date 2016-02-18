@@ -9,8 +9,20 @@ import javax.imageio.ImageIO;
 import edu.aecc.bulletin.io.ResourceLoader;
 import edu.aecc.bulletin.io.ResourceManager;
 
+/**
+ * Application that tests the resource loading system.
+ * 
+ * @author Juan J. Alvarez <jalvarez52419972@gmail.com>
+ *
+ */
 public class ResourceLoaderTest {
 
+	/**
+	 * Entry point
+	 * 
+	 * @param arguments
+	 *            Command line arguments
+	 */
 	public static void main(String[] arguments) {
 		long start = System.currentTimeMillis();
 		ResourceManager<BufferedImage> rm = new ResourceManager<BufferedImage>(new File("docs"),
@@ -27,6 +39,7 @@ public class ResourceLoaderTest {
 					}
 				});
 		rm.loadResources();
-		System.out.println(String.format("It took %d milliseconds to load all resources", System.currentTimeMillis()-start));
+		System.out.println(
+				String.format("It took %d milliseconds to load all resources", System.currentTimeMillis() - start));
 	}
 }

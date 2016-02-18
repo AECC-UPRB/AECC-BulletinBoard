@@ -1,4 +1,4 @@
-package edu.aecc.bulletin;
+package edu.aecc.bulletin.core;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
@@ -42,7 +42,23 @@ public interface Executable {
 	public abstract void stop();
 
 	/**
-	 * Handles keyboard events durring runtime.
+	 * Handles key press events.
+	 * 
+	 * @param ke
+	 *            KeyEvent that was triggered
+	 */
+	public abstract void keyPressed(KeyEvent ke);
+
+	/**
+	 * Handles key release events.
+	 * 
+	 * @param ke
+	 *            KeyEvent that was triggered
+	 */
+	public abstract void keyReleased(KeyEvent ke);
+
+	/**
+	 * Handles key type events.
 	 * 
 	 * @param ke
 	 *            KeyEvent that was triggered

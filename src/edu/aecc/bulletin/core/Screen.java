@@ -1,4 +1,4 @@
-package edu.aecc.bulletin;
+package edu.aecc.bulletin.core;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -30,6 +30,7 @@ public class Screen extends JPanel implements KeyListener {
 		System.out.println("Creating new Screen");
 		exec = e;
 		frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(this);
 		frame.addKeyListener(this);
 		frame.setUndecorated(true);
@@ -61,10 +62,12 @@ public class Screen extends JPanel implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
+		exec.keyPressed(arg0);
 	}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
+		exec.keyReleased(arg0);
 	}
 
 	@Override
