@@ -15,7 +15,7 @@ import edu.aecc.bulletin.core.Application;
 import edu.aecc.bulletin.core.Executable;
 import edu.aecc.bulletin.io.ResourceLoader;
 import edu.aecc.bulletin.io.ResourceManager;
-import utilities.ImageUtils;
+import edu.aecc.bulletin.utilities.ImageUtils;
 
 /**
  * Application that provides a very basic demo of what the final version of this

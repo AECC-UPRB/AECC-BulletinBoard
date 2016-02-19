@@ -3,7 +3,7 @@ package edu.aecc.bulletin.core;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 
-import utilities.Logger;
+import edu.aecc.bulletin.utilities.Logger;
 
 /**
  * A controller that will handle the given executable.

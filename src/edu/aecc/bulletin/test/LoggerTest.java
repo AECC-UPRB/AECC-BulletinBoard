@@ -1,6 +1,6 @@
 package edu.aecc.bulletin.test;
 
-import utilities.Logger;
+import edu.aecc.bulletin.utilities.Logger;
 
 /**
  * Application that tests the Logger utility.

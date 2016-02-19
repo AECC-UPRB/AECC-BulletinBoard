@@ -1,4 +1,4 @@
-package utilities;
+package edu.aecc.bulletin.utilities;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
