@@ -67,9 +67,9 @@ public class BulletinDemo implements Executable {
 
 	@Override
 	public void draw(Graphics g) {
-		BufferedImage i = ImageUtils.maxScale(image, 3000, 2000);
-		int x = (3000 - i.getWidth()) / 2;
-		int y = (2000 - i.getTileHeight()) / 2;
+		BufferedImage i = ImageUtils.maxScale(image, SCREEN_WIDTH, SCREEN_HEIGHT);
+		int x = (SCREEN_WIDTH - i.getWidth()) / 2;
+		int y = (SCREEN_HEIGHT - i.getTileHeight()) / 2;
 		g.drawImage(i, x, y, null);
 		g.setFont(new Font("Arial", Font.PLAIN, 32));
 		g.setColor(Color.RED);

@@ -90,5 +90,6 @@ public class Application implements Runnable {
 		}
 		screen.getFrame().dispose();
 		exec.stop();
+		System.exit(0);
 	}
 }

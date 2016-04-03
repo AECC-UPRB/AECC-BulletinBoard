@@ -1,6 +1,7 @@
 package edu.aecc.bulletin.core;
 
 import java.awt.Graphics;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 
 /**
@@ -10,6 +11,10 @@ import java.awt.event.KeyEvent;
  *
  */
 public interface Executable {
+
+	public static final int SCREEN_WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+
+	public static final int SCREEN_HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
 
 	/**
 	 * Allows preallocated time to load and resources and other computational
