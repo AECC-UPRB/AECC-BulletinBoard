@@ -1,4 +1,4 @@
-package edu.aecc.bulletin.core;
+package edu.aecc.bulletin.application;
 
 import java.awt.Graphics;
 import java.awt.Toolkit;
@@ -23,7 +23,7 @@ public interface Executable {
 	 * @param a
 	 *            Application that will handle the executable
 	 */
-	public abstract void init(Application a);
+	public abstract void init(App a);
 
 	/**
 	 * Draws components onto the screen.

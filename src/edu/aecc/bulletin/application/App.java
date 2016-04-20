@@ -1,4 +1,4 @@
-package edu.aecc.bulletin.core;
+package edu.aecc.bulletin.application;
 
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
@@ -11,7 +11,7 @@ import edu.aecc.bulletin.utilities.Logger;
  * @author Juan J. Alvarez <jalvarez52419972@gmail.com>
  *
  */
-public class Application implements Runnable {
+public class App implements Runnable {
 
 	private Executable exec;
 	private Thread thread;
@@ -26,7 +26,7 @@ public class Application implements Runnable {
 	 * @param e
 	 *            Executable to handle
 	 */
-	public Application(Executable e) {
+	public App(Executable e) {
 		Logger.init();
 		gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
 		exec = e;

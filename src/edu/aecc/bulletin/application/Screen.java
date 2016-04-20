@@ -1,4 +1,4 @@
-package edu.aecc.bulletin.core;
+package edu.aecc.bulletin.application;
 
 import java.awt.Color;
 import java.awt.Graphics;

@@ -8,8 +8,8 @@ import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import edu.aecc.bulletin.core.Application;
-import edu.aecc.bulletin.core.Executable;
+import edu.aecc.bulletin.application.App;
+import edu.aecc.bulletin.application.Executable;
 
 /**
  * Basic test that illustrates all possible display modes.
@@ -20,7 +20,7 @@ import edu.aecc.bulletin.core.Executable;
 public class DisplayModeTest implements Executable {
 
 	private GraphicsDevice gd;
-	private Application app;
+	private App app;
 
 	/**
 	 * Entry point to this test
@@ -30,12 +30,12 @@ public class DisplayModeTest implements Executable {
 	 */
 	public static void main(String[] args) {
 		Executable exec = new DisplayModeTest();
-		Application a = new Application(exec);
+		App a = new App(exec);
 		a.start();
 	}
 
 	@Override
-	public void init(Application a) {
+	public void init(App a) {
 		gd = a.getGraphicsDevice();
 		app = a;
 	}

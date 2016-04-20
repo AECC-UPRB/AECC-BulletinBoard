@@ -10,8 +10,8 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
-import edu.aecc.bulletin.core.Application;
-import edu.aecc.bulletin.core.Executable;
+import edu.aecc.bulletin.application.App;
+import edu.aecc.bulletin.application.Executable;
 import edu.aecc.bulletin.io.ResourceLoader;
 import edu.aecc.bulletin.io.ResourceManager;
 import edu.aecc.bulletin.utilities.ImageUtils;
@@ -38,11 +38,11 @@ public class ImageDisplayTest implements Executable {
 	 *            Command line arguments
 	 */
 	public static void main(String[] arguments) {
-		new Application(new ImageDisplayTest()).start();
+		new App(new ImageDisplayTest()).start();
 	}
 
 	@Override
-	public void init(Application a) {
+	public void init(App a) {
 		rm = new ResourceManager<BufferedImage>(new File("docs"), new ResourceLoader<BufferedImage>() {
 
 			@Override

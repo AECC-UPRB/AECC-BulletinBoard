@@ -5,8 +5,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import edu.aecc.bulletin.core.Application;
-import edu.aecc.bulletin.core.Executable;
+import edu.aecc.bulletin.application.App;
+import edu.aecc.bulletin.application.Executable;
 
 /**
  * Basic test that illustrates the tick counter.
@@ -26,12 +26,12 @@ public class TickTest implements Executable {
 	 */
 	public static void main(String[] args) {
 		Executable e = new TickTest();
-		Application a = new Application(e);
+		App a = new App(e);
 		a.start();
 	}
 
 	@Override
-	public void init(Application a) {
+	public void init(App a) {
 	}
 
 	@Override

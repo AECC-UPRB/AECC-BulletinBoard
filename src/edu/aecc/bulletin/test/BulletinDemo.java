@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
-import edu.aecc.bulletin.core.Application;
-import edu.aecc.bulletin.core.Executable;
+import edu.aecc.bulletin.application.App;
+import edu.aecc.bulletin.application.Executable;
 import edu.aecc.bulletin.io.ResourceLoader;
 import edu.aecc.bulletin.io.ResourceManager;
 import edu.aecc.bulletin.utilities.ImageUtils;
@@ -33,10 +33,10 @@ public class BulletinDemo implements Executable {
 	 *            Command line arguments
 	 */
 	public static void main(String[] arguments) {
-		new Application(new BulletinDemo()).start();
+		new App(new BulletinDemo()).start();
 	}
 
-	private Application app;
+	private App app;
 	private ArrayList<BufferedImage> imageList;
 	private ResourceManager<BufferedImage> rm;
 	private BufferedImage image;
@@ -44,7 +44,7 @@ public class BulletinDemo implements Executable {
 	private long ticks;
 
 	@Override
-	public void init(Application a) {
+	public void init(App a) {
 		app = a;
 		rm = new ResourceManager<BufferedImage>(new File("docs"), new ResourceLoader<BufferedImage>() {
 
